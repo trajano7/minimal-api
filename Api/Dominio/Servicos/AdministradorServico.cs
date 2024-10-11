@@ -31,7 +31,7 @@ namespace MinimalApi.Dominio.Servicos
 
         public Administrador? Login(LoginDTO loginDTO)
         {
-            return _contexto.Administradores.Where(user => user.Email == loginDTO.Email && user.Senha == loginDTO.Password).FirstOrDefault();
+            return _contexto.Administradores.Where(user => user.Email == loginDTO.Email && user.Senha == loginDTO.Senha).FirstOrDefault();
         }
 
         public List<Administrador> Todos(int? pagina)

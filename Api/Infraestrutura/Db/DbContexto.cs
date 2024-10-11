@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using minimal_api.Migrations;
 using MinimalApi.Dominio.Entidades;
 
 namespace MinimalApi.Infraestrutura.Db;
@@ -18,7 +19,8 @@ public class DbContexto : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Administrador>().HasData(
-            new Administrador {
+            new Administrador
+            {
                 Id = 1,
                 Email = "admin@teste.com",
                 Senha = "123456",
